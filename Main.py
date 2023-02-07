@@ -1,22 +1,19 @@
-import pexpect
+import paramiko
 
+# Connect to the remote machine
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect('192.168.0.113', username='phoenix', password='1122')
 
-def main():
-    # Open an ssh connection to the remote machine
-    ssh = pexpect.spawn("ssh root@remote_machine_ip")
+# Run the command
+stdin, stdout, stderr = ssh.exec_command('ls -l')
 
-    # Wait for the password prompt and send the password
-    ssh.expect("Password:")
-    ssh.sendline("your_password")
+# Capture the output
+output = stdout.read().decode()
 
-    # Wait for the command prompt and run the ls command
-    ssh.expect("#")
-    ssh.sendline("ls")
+# Save the output to a file
+with open('output.txt', 'w') as file:
+    file.write(output)
 
-    # Save the output to a file
-    with open("output.txt", "w") as f:
-        f.write(ssh.before.decode("utf-8"))
-
-
-if __name__ == "__main__":
-    main()
+# Close the connection
+ssh.close()

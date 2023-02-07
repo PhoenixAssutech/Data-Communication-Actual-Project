@@ -1,0 +1,12 @@
+total 74532
+drwxrwxr-x 5 phoenix phoenix     4096 Dec 17 19:26 aiXcoder
+drwxr-xr-x 2 phoenix phoenix     4096 Dec  6 21:15 Desktop
+drwxr-xr-x 6 phoenix phoenix     4096 Feb  7 18:49 Documents
+drwxr-xr-x 2 phoenix phoenix     4096 Feb  7 00:26 Downloads
+-rw-r--r-- 1 root    root    76277604 Oct 15 20:56 GitHubDesktop-linux-3.1.1-linux1.deb
+drwxr-xr-x 3 phoenix phoenix     4096 Dec  6 21:41 IdeaProjects
+drwxr-xr-x 2 phoenix phoenix     4096 Dec  6 12:59 Music
+drwxr-xr-x 2 phoenix phoenix     4096 Dec  6 12:59 Pictures
+drwxr-xr-x 2 phoenix phoenix     4096 Dec  6 12:59 Public
+drwxr-xr-x 2 phoenix phoenix     4096 Dec  6 21:15 Templates
+drwxr-xr-x 2 phoenix phoenix     4096 Dec  6 12:59 Videos
