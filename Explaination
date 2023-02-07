@@ -1,11 +1,15 @@
-The above code uses the paramiko library to connect to a remote machine with IP address '192.168.0.113' and login credentials username='phoenix' and password='1122'. The set_missing_host_key_policy() method is used to set the missing host key policy to automatically add the host key.
+The above code uses the paramiko library to connect to a remote machine with IP address '192.168.0.113' and login credentials username='phoenix' and password='1122'.
+ The set_missing_host_key_policy() method is used to set the missing host key policy to automatically add the host key.
 
-After the connection is established, the exec_command() method is used to run the command ls -l on the remote machine. The exec_command() method returns the standard input, standard output, and standard error as separate objects. In this case, the standard output is stored in the variable stdout.
+After the connection is established, the exec_command() method is used to run the command ls -l on the remote machine.
+The exec_command() method returns the standard input, standard output, and standard error as separate objects. In this case, the standard output is stored in the variable stdout.
 
-The output from the remote machine is then decoded from its binary format using the decode() method and stored in the variable output. This decoded output is then saved to a file named output.txt using the with statement and the write() method.
+The output from the remote machine is then decoded from its binary format using the decode() method and stored in the variable output.
+This decoded output is then saved to a file named output.txt using the with statement and the write() method.
 
 Finally, the close() method is used to close the SSH connection.
 
-It is worth mentioning that the exec_command() method is a blocking call, which means that the code will wait until the command has completed before continuing to execute. This can be useful in scenarios where the output of the command is needed to determine the next steps in the program.
+It is worth mentioning that the exec_command() method is a blocking call, which means that the code will wait until the command has completed before continuing to execute.
+ This can be useful in scenarios where the output of the command is needed to determine the next steps in the program.
 
 
